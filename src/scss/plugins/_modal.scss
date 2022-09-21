@@ -1,0 +1,121 @@
+.vue-modal {
+    &-resizer {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        width: 0.75rem;
+        height: 0.75rem;
+        right: 0;
+        bottom: 0;
+        z-index: 10000;
+        background: transparent;
+        cursor: se-resize;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 0.625rem solid #ddd;
+            border-left: 0.625rem solid transparent;
+        }
+
+        &.clicked::after {
+            border-bottom: 0.625rem solid #369be9;
+        }
+    }
+}
+
+.vm {
+    &--block-scroll {
+        overflow: hidden;
+        width: 100vw;
+    }
+
+    &--container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: $zindex-modal;
+
+        &.scrollable {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    }
+
+    &--overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #343434;
+        opacity: 0.46;
+        transition: 0.3s ease-out;
+    }
+
+    &--modal {
+        position: relative;
+        border-radius: 0.75rem;
+        background: white;
+    }
+
+    &--top-right-slot {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &-transition {
+        &--overlay {
+            &-enter-active {
+                transition: 0.3s ease-out;
+            }
+
+            &-leave-active {
+                transition: 0.2s ease-in;
+            }
+
+            &-enter,
+            &-leave-active {
+                opacity: 0;
+            }
+        }
+
+        &--modal {
+            &-enter-active {
+                transition: 0.2s ease-out;
+            }
+
+            &-leave-active {
+                transition: 0.1s ease-in;
+            }
+
+            &-enter,
+            &-leave-active {
+                opacity: 0;
+                transform: translateY(-1.25rem);
+            }
+        }
+
+        &--default {
+            &-enter-active,
+            &-leave-active {
+                transition: all 2ms;
+            }
+
+            &-enter,
+            &-leave-active {
+                opacity: 0;
+            }
+        }
+    }
+}

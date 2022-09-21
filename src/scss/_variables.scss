@@ -1,0 +1,81 @@
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 996px;
+$grid-breakpoint-lg: 1200px;
+$grid-breakpoint-xl: 1600px;
+
+$grid-breakpoints: (
+    xs: $grid-breakpoint-xs,
+    sm: $grid-breakpoint-sm,
+    md: $grid-breakpoint-md,
+    lg: $grid-breakpoint-lg,
+    xl: $grid-breakpoint-xl,
+) !default;
+
+$grid-columns: 12 !default;
+
+// Fonts
+$font-family-body: 'Roboto', sans-serif;
+
+// Colors
+$color-green: #12b23f;
+$color-red: #eb4a14;
+$color-blue: #4bbdfd;
+$color-black: #212121;
+$color-white: #ffffff;
+$color-gray: #808080;
+$color-dusty-gray: #949494;
+$color-tundora: #484848;
+$color-silver: #aaaaaa;
+$color-iron: #d4d5d5;
+$color-alabaster: #f8f8f8;
+
+// Brand colors
+$color-brand-accent: #25c278;
+
+// Text colors
+$color-text-headline: $color-black;
+$color-text-primary: $color-tundora;
+$color-text-secondary: $color-gray;
+$color-text-tertiary: $color-silver;
+$color-text-muted: $color-iron;
+$color-text-success: $color-green;
+$color-text-error: $color-red;
+
+// Link colors
+$color-link-primary: $color-blue;
+$color-link-secondary: #969fa8;
+
+// Background color
+$color-bg-main: $color-alabaster;
+$color-bg-primary: $color-white;
+$color-bg-error: #fce3db;
+
+// Border colors
+$color-border: #e5e4e5;
+
+// Icon colors
+$color-icon-primary: $color-tundora;
+$color-icon-secondary: $color-silver;
+
+// Control colors
+$color-control-inactive: #dedddd;
+$color-control-primary: $color-blue;
+$color-control-secondary: $color-tundora;
+$color-control-active: $color-blue;
+
+// Shadow colors
+$color-shadow-default: rgba(98, 98, 98, 0.08);
+
+//Shadows
+$shadow-default: 0px 3px 13px 1px $color-shadow-default;
+
+// Z-index
+$zindex-sidebar: 1000;
+$zindex-header: 1009;
+$zindex-footer: 1009;
+$zindex-modal: 10006;
+
+// Sizes
+$header-height: 4rem;
+$footer-height: 3rem;

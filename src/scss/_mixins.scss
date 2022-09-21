@@ -1,0 +1,42 @@
+@mixin reset-button {
+    padding: 0;
+    flex: 0 0 auto;
+
+    background: transparent;
+
+    font-family: inherit;
+    text-decoration: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+        outline: revert;
+    }
+}
+
+@mixin defineColor($name, $color) {
+    #{$name}: $color;
+}
+
+@mixin defineColorRGB($color, $red, $green, $blue) {
+    @include defineColor($color, rgb($red, $green, $blue));
+}
+
+@mixin defineColorRGBA($color, $red, $green, $blue, $alpha) {
+    @include defineColor($color, rgba($red, $green, $blue, $alpha));
+}
+
+@mixin make-theme($name, $options) {
+    :root,
+    [data-theme='#{$name}'] {
+        @each $name, $color in $options {
+            @include defineColor($name, $color);
+        }
+    }
+}
