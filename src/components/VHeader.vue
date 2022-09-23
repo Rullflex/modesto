@@ -25,7 +25,7 @@ export default class VHeader extends Vue {}
     width: 100%;
     height: 100%;
 
-    background: var(--color-silver);
+    background: var(--color-iron);
 
     position: relative;
 }

@@ -17,6 +17,7 @@ import VAppHeader from '@/components/VAppHeader.vue';
 import VAppMain from '@/components/VAppMain.vue';
 
 @Component({
+    head: { title: { inner: 'pizza' } },
     components: {
         VAppLayout,
         VAppHeader,

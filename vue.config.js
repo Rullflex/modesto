@@ -3,7 +3,7 @@ module.exports = {
     css: {
         loaderOptions: {
             scss: {
-                prependData: `@use "sass:math";@import "~@/scss/variables";@import "~@/scss/mixins";`,
+                prependData: `@use "sass:math";@import "~@/scss/variables";@import "~@/scss/mixins";@import "~@/scss/placeholders";`,
             },
         },
     },
